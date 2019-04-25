@@ -18,8 +18,9 @@
 	<script src="https://cdn.jsdelivr.net/gh/TehcJS/KAWS@latest/pjs2html.js"></script>
 	<canvas id="canvas"></canvas>
 	<script>
-		pjs.init(Processing, document.getElementById("canvas"), 4846888947384320);
-		with(pjs.pI) {
+		var canvas = document.getElementById("canvas");
+		var pjs = new pI(canvas);
+		with(pjs) {
 			ws.connect("wss://example.com");
 		}
 	</script>
